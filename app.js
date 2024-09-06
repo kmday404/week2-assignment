@@ -2,13 +2,13 @@ console.log("test");
 
 let images = [
   {
-    src: "https://pixabay.com/photos/teamwork-cooperation-brainstorming-3213924/", //put these in an assets folder
+    src: "", //put these in an assets folder
     alt: "test image",
     height: 200,
     width: 300,
   },
   {
-    src: "https://pixabay.com/photos/teamwork-cooperation-brainstorming-3213924/",
+    src: "",
     alt: "test2",
     height: 200,
     width: 300,
