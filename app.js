@@ -58,26 +58,18 @@ function createThumbnails(thumbnailContainer) {
     image.className = "img-1";
     image.addEventListener("click", handleClick);
   });
+  function handleClick() {
+    createLargeImage(this.src); //I asked chatGPT why createLargeImage(thumbnail[index]); wasn't working here and it suggested using 'this' - I don't fully understand the 'this' function... "You might want to use this to refer to the clicked image and manage the larger image container separately." "When this is used inside an event handler, it refers to the element that the event was fired on. For example, if you have an onclick event on an <img> element, this refers to that <img> element."
+  }
 }
 createThumbnails(thumbnailContainer);
 
-function handleClick() {
-  console.log("You have clicked the button!");
-  document.body.style.backgroundImage = images;
+function createLargeImage(src) {
+  //I think src is the parameter here because of the chatGPT code I used on line62
+  let largeImageContainer = document.getElementById("main-image-container");
+  largeImageContainer.innerHTML = ""; // Clear previous images
+  let image = document.createElement("img");
+  image.src = src; // again the source is src because of the coding used above, I tried to change this to another word but got errors, I am unsure why this is
+  image.className = "img-2";
+  largeImageContainer.appendChild(image);
 }
-//2nd we need to set up our event listener
-//addEventsListeners has two arguments (type of event, name of event handler)
-
-//we need to append the image to the container -- append is to add to, so yu cannot append children if there is no HTML foundations
-
-//you might not want to return the element, e.g. we have a functin that creates images
-//function createImage(imageSrc, imageAlt){
-//const newImage = document.createElement("img")
-// newImage.src = imageSrc;
-// newImage.alt = imageAlt;
-//dont forget to append the image here
-//}
-//createImage("link", "beautiful image");
-//in this case you won't be using the src or the alt elsewhere in your code. so you won't want to return them.
-
-//function createLargeImage() {}
