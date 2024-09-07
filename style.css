@@ -1,32 +1,30 @@
 @import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
 
 * {
-  background-color: paleturquoise;
+  background-color: none;
+}
+body {
+  height: 100%;
+  margin: 0;
 }
 
-body {
-  display: grid;
-  grid-template-columns: 100px 50% 1fr;
-  grid-template-rows: 2fr 3fr 1fr;
-  column-gap: 50px;
-  row-gap: 20px;
-  background-image: url(https://images.unsplash.com/photo-1527475549522-94b2a376ce13?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-}
 #thumbnail-container {
-  /* if you specify columns, it's left to right
-    if you specify rows, it's top to bottom */
-  grid-column-start: 1;
-  grid-row-start: 1;
-  /* the last column is represented by the number -1 */
-  grid-column-end: -1;
+  height: 100px;
+  width: 100px;
+  padding: 10px;
+  z-index: 1;
+  position: fixed;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 #main-image-container {
-  background-color: bisque;
-  background-size: cover;
-  grid-column-start: 1;
-  grid-row-start: 2;
-  grid-column-end: span 3;
-  grid-row-end: span 3;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#left-click {
+  position: relative;
+}
+#right-clikc {
+  position: relative;
 }
