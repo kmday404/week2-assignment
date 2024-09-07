@@ -56,14 +56,17 @@ function createThumbnails(thumbnailContainer) {
     image.width = 200;
     thumbnailContainer.appendChild(image);
     image.className = "img-1";
+    image.addEventListener("click", handleClick);
   });
 }
 createThumbnails(thumbnailContainer);
 
-const foods = ["pizza", "chocolate", "ice cream", "cheese"];
-foods.forEach(function (index, food) {
-  console.log(food, index);
-});
+function handleClick() {
+  console.log("You have clicked the button!");
+  document.body.style.backgroundImage = images;
+}
+//2nd we need to set up our event listener
+//addEventsListeners has two arguments (type of event, name of event handler)
 
 //we need to append the image to the container -- append is to add to, so yu cannot append children if there is no HTML foundations
 
