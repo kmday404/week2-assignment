@@ -3,14 +3,14 @@ console.dir(document);
 
 const images = [
   {
-    src: "./assets/car-interior.jpg",
-    alt: "Car interior",
+    src: "./assets/cat-1.jpg",
+    alt: "A grey cat",
     height: 200,
     width: 300,
   },
   {
-    src: "./assets/cat-1.jpg",
-    alt: "A grey cat",
+    src: "./assets/car-interior.jpg",
+    alt: "Car interior",
     height: 200,
     width: 300,
   },
@@ -72,4 +72,9 @@ function createLargeImage(src) {
   image.src = src; // again the source is src because of the coding used above, I tried to change this to another word but got errors, I am unsure why this is
   image.className = "img-2";
   largeImageContainer.appendChild(image);
+}
+
+const previousImageButton = document.getElementById("previous");
+function preiousImage(index) {
+  //clicks = ;
 }
