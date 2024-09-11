@@ -58,6 +58,7 @@ function createThumbnails(thumbnailContainer) {
     image.className = "img-1";
     image.addEventListener("click", handleClick);
   });
+  // debugger;
   function handleClick() {
     createLargeImage(this.src); //I asked chatGPT why createLargeImage(thumbnail[index]); wasn't working here and it suggested using 'this' - I don't fully understand the 'this' function... "You might want to use this to refer to the clicked image and manage the larger image container separately." "When this is used inside an event handler, it refers to the element that the event was fired on. For example, if you have an onclick event on an <img> element, this refers to that <img> element."
   }
